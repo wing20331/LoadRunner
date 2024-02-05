@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Date: Mon, 05 Feb 2024 17:49:29 GMT
+Server: Apache/2.2.21 (Win32)
+Expires: 5s
+Set-Cookie: MTUserInfo=firstName&Kitty&address2&San%20Ricardo%2F12345&username&kittysoftpaws&hash&19&lastName&Softpaws%0A&address1&456%20Golden%20Goose%20Street&creditCard&&expDate&%0A; path=/
+Keep-Alive: timeout=5, max=97
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=ISO-8859-1
+

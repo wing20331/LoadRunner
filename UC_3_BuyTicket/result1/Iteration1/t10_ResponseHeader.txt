@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Date: Mon, 05 Feb 2024 17:46:32 GMT
+Server: Apache/2.2.21 (Win32)
+Expires: Sun, 04 Feb 2024 17:46:32 GMT
+Set-Cookie: MTUserInfo=firstName&Jack&username&jackandjill&address2&San%20Ricardo%2F12345&hash&108&address1&101%20Nursery%20Rhyme%20Road&lastName&Horner%0A; path=/
+Keep-Alive: timeout=5, max=90
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=ISO-8859-1
+

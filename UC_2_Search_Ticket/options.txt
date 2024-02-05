@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IC:\Users\wing2\Desktop\скрипты\UC_2_Search_Ticket
+-ID:\HPLoudRunner\include
+-ec:\users\wing2\desktop\скрипты\uc_2_search_ticket\\logfile.log
+c:\users\wing2\desktop\скрипты\uc_2_search_ticket\\combined_UC_2_Search_Ticket.c
+c:\users\wing2\desktop\скрипты\uc_2_search_ticket\\pre_cci.c
