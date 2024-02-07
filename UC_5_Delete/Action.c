@@ -61,6 +61,8 @@ Action()
 		
 		lr_end_transaction("IndexPage", LR_AUTO);
 		
+		lr_think_time(5);
+		
 		lr_start_transaction("LogIn");
 
 
@@ -116,6 +118,9 @@ Action()
 	
 	lr_end_transaction("LogIn", LR_AUTO);
 	
+	lr_start_transaction("GoToFligth");
+
+	
 	
 	rndint = atoi(lr_eval_string("{rnd}"));
 	
@@ -145,6 +150,14 @@ Action()
 		"Mode=HTML", 
 		LAST);
 		
+		
+		lr_end_transaction("GoToFligth", LR_AUTO);
+		
+		
+		lr_start_transaction("DeleteTicket");
+
+
+		
 		web_add_header("Origin", 
 		"http://localhost:1080");
 	
@@ -170,6 +183,9 @@ Action()
     
 	}
 	
+	
+	lr_end_transaction("DeleteTicket", LR_AUTO);
+
 	
 	lr_start_transaction("LogOut");
 

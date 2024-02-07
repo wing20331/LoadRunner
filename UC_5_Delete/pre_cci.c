@@ -1,4 +1,4 @@
-# 1 "c:\\users\\wing2\\desktop\\\361\352\360\350\357\362\373\\uc_5_delete\\\\combined_UC_5_Delete.c"
+# 1 "c:\\users\\wing2\\documents\\vugen\\scripts\\uc_5_delete\\\\combined_UC_5_Delete.c"
 # 1 "D:\\HPLoudRunner\\include/lrun.h" 1
  
  
@@ -966,7 +966,7 @@ int lr_db_getvalue(char * pFirstArg, ...);
 
 
 
-# 1 "c:\\users\\wing2\\desktop\\\361\352\360\350\357\362\373\\uc_5_delete\\\\combined_UC_5_Delete.c" 2
+# 1 "c:\\users\\wing2\\documents\\vugen\\scripts\\uc_5_delete\\\\combined_UC_5_Delete.c" 2
 
 # 1 "D:\\HPLoudRunner\\include/SharedParameter.h" 1
 
@@ -1132,7 +1132,7 @@ extern VTCERR2  lrvtc_noop();
 
 
 
-# 2 "c:\\users\\wing2\\desktop\\\361\352\360\350\357\362\373\\uc_5_delete\\\\combined_UC_5_Delete.c" 2
+# 2 "c:\\users\\wing2\\documents\\vugen\\scripts\\uc_5_delete\\\\combined_UC_5_Delete.c" 2
 
 # 1 "globals.h" 1
 
@@ -2608,14 +2608,14 @@ long WebSocketReceiveLen0   = sizeof(WebSocketReceive0) - 1;
 
 
 
-# 3 "c:\\users\\wing2\\desktop\\\361\352\360\350\357\362\373\\uc_5_delete\\\\combined_UC_5_Delete.c" 2
+# 3 "c:\\users\\wing2\\documents\\vugen\\scripts\\uc_5_delete\\\\combined_UC_5_Delete.c" 2
 
 # 1 "vuser_init.c" 1
 vuser_init()
 {
 	return 0;
 }
-# 4 "c:\\users\\wing2\\desktop\\\361\352\360\350\357\362\373\\uc_5_delete\\\\combined_UC_5_Delete.c" 2
+# 4 "c:\\users\\wing2\\documents\\vugen\\scripts\\uc_5_delete\\\\combined_UC_5_Delete.c" 2
 
 # 1 "Action.c" 1
 Action()
@@ -2681,6 +2681,8 @@ Action()
 		
 		lr_end_transaction("IndexPage", 2);
 		
+		lr_think_time(5);
+		
 		lr_start_transaction("LogIn");
 
 
@@ -2736,6 +2738,9 @@ Action()
 	
 	lr_end_transaction("LogIn", 2);
 	
+	lr_start_transaction("GoToFligth");
+
+	
 	
 	rndint = atoi(lr_eval_string("{rnd}"));
 	
@@ -2765,6 +2770,14 @@ Action()
 		"Mode=HTML", 
 		"LAST");
 		
+		
+		lr_end_transaction("GoToFligth", 2);
+		
+		
+		lr_start_transaction("DeleteTicket");
+
+
+		
 		web_add_header("Origin", 
 		"http://localhost:1080");
 	
@@ -2790,6 +2803,9 @@ Action()
     
 	}
 	
+	
+	lr_end_transaction("DeleteTicket", 2);
+
 	
 	lr_start_transaction("LogOut");
 
@@ -2818,12 +2834,12 @@ Action()
 
 	return 0;
 }
-# 5 "c:\\users\\wing2\\desktop\\\361\352\360\350\357\362\373\\uc_5_delete\\\\combined_UC_5_Delete.c" 2
+# 5 "c:\\users\\wing2\\documents\\vugen\\scripts\\uc_5_delete\\\\combined_UC_5_Delete.c" 2
 
 # 1 "vuser_end.c" 1
 vuser_end()
 {
 	return 0;
 }
-# 6 "c:\\users\\wing2\\desktop\\\361\352\360\350\357\362\373\\uc_5_delete\\\\combined_UC_5_Delete.c" 2
+# 6 "c:\\users\\wing2\\documents\\vugen\\scripts\\uc_5_delete\\\\combined_UC_5_Delete.c" 2
 

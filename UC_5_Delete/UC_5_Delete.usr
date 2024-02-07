@@ -53,7 +53,7 @@ vuser_init=cci
 Action=cci
 vuser_end=cci
 [TransactionsOrder]
-Order="UC_5_Delete__*delimiter*__IndexPage__*delimiter*__LogIn__*delimiter*__LogOut"
+Order="UC_5_Delete__*delimiter*__IndexPage__*delimiter*__LogIn__*delimiter*__LogOut__*delimiter*__GoToFligth__*delimiter*__DeleteTicket"
 [StateManagement]
 LastReplayStatus=1
 [ActiveReplay]
@@ -64,6 +64,8 @@ UC_5_Delete=
 IndexPage=
 LogIn=
 LogOut=
+GoToFligth=
+DeleteTicket=
 [ParameterSimulation]
 NumVusers=5
 IsDurationIndefinite=1

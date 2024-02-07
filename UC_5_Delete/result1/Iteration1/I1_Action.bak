@@ -6,9 +6,11 @@ PassCount=1
 Pass1=t2
 [t12]
 Pass2=t8
-PassCount=2
+Pass3=t11
+PassCount=3
 Pass1=t5
 [t13]
 Pass2=t9
-PassCount=2
+Pass3=t12
+PassCount=3
 Pass1=t6

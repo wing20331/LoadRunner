@@ -2,8 +2,8 @@
 -DCCI
 -D_IDA_XL
 -DWINNT
--IC:\Users\wing2\Desktop\скрипты\UC_5_Delete
+-IC:\Users\wing2\Documents\VuGen\Scripts\UC_5_Delete
 -ID:\HPLoudRunner\include
--ec:\users\wing2\desktop\скрипты\uc_5_delete\\logfile.log
-c:\users\wing2\desktop\скрипты\uc_5_delete\\combined_UC_5_Delete.c
-c:\users\wing2\desktop\скрипты\uc_5_delete\\pre_cci.c
+-ec:\users\wing2\documents\vugen\scripts\uc_5_delete\\logfile.log
+c:\users\wing2\documents\vugen\scripts\uc_5_delete\\combined_UC_5_Delete.c
+c:\users\wing2\documents\vugen\scripts\uc_5_delete\\pre_cci.c
