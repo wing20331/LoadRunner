@@ -65,6 +65,8 @@ lr_start_transaction("UC1_Buy_Ticket");
 		
 		lr_end_transaction("IndexPage", LR_AUTO);
 		
+		lr_think_time(5);
+		
 		lr_start_transaction("LogIn");
 
 
@@ -120,6 +122,8 @@ lr_start_transaction("UC1_Buy_Ticket");
 	
 	lr_end_transaction("LogIn", LR_AUTO);
 	
+	lr_think_time(5);
+	
 	lr_start_transaction("GotoFlight");
 
 
@@ -159,11 +163,13 @@ lr_start_transaction("UC1_Buy_Ticket");
 	web_add_auto_header("Origin", 
 		"http://localhost:1080");
 
-	lr_think_time(5);
+	
 
 	
 		
 		lr_end_transaction("GotoFlight", LR_AUTO);
+		
+		lr_think_time(5);
 		
 		lr_start_transaction("SearchTiket");
 		
@@ -216,6 +222,8 @@ lr_start_transaction("UC1_Buy_Ticket");
 
 	
 		lr_end_transaction("SearchTiket", LR_AUTO);
+		
+		lr_think_time(5);
 		
 		lr_start_transaction("ChooseAirCraft");
 		
@@ -293,6 +301,29 @@ sprintf(itemDataBuffer + strlen(itemDataBuffer),
 	
 	
 lr_end_transaction("CreditInfo", LR_AUTO);
+
+lr_think_time(5);
+	
+	lr_start_transaction("GoToTicket");
+
+
+	
+	web_reg_find("Text=User wants the intineraries",
+		LAST);
+
+	web_url("Itinerary Button", 
+		"URL=http://localhost:1080/cgi-bin/welcome.pl?page=itinerary", 
+		"TargetFrame=body", 
+		"Resource=0", 
+		"RecContentType=text/html", 
+		"Referer=http://localhost:1080/cgi-bin/nav.pl?page=menu&in=home", 
+		"Snapshot=t27.inf", 
+		"Mode=HTML", 
+		LAST);
+	
+	lr_end_transaction("GoToTicket", LR_AUTO);
+
+lr_think_time(5);
 
 lr_start_transaction("LogOut");
 

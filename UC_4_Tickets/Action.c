@@ -39,8 +39,9 @@ Action()
 		
 
 	web_reg_find("Text=Welcome to the Web Tours site",
-		LAST);
-lr_start_transaction("GoToIndex");
+             		LAST);
+             		
+	lr_start_transaction("GoToIndex");
 
 		
 
@@ -75,8 +76,11 @@ lr_start_transaction("GoToIndex");
 		"same-origin");
 	
 	lr_end_transaction("GoToIndex", LR_AUTO);
+	
+	lr_think_time(5);
 
 	lr_start_transaction("LogIn");
+	
 
 	
 	web_reg_find("Text=User password was correct",
@@ -106,6 +110,9 @@ lr_start_transaction("GoToIndex");
 		"1");
 	
 	lr_end_transaction("LogIn", LR_AUTO);
+	
+	lr_think_time(5);
+	
 	lr_start_transaction("GoToTicket");
 
 
@@ -124,13 +131,14 @@ lr_start_transaction("GoToIndex");
 		LAST);
 	
 	lr_end_transaction("GoToTicket", LR_AUTO);
+	
+	lr_think_time(5);
 
 	lr_start_transaction("LogOut");
 
 	web_revert_auto_header("Sec-Fetch-User");
 
-	lr_think_time(5);
-	
+		
 	web_reg_find("Text=Welcome to the Web Tours site",
 		LAST);
 

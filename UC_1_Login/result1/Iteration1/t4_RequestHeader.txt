@@ -1,4 +1,4 @@
-GET /cgi-bin/welcome.pl?signOff=1 HTTP/1.1
+GET /cgi-bin/welcome.pl?page=search HTTP/1.1
 Referer: http://localhost:1080/cgi-bin/nav.pl?page=menu&in=home
 Sec-Fetch-Dest: frame
 Sec-Fetch-Site: same-origin
@@ -13,5 +13,5 @@ Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
 Accept: */*
 Connection: Keep-Alive
 Host: localhost:1080
-Cookie: MSO=SID&1707151433; MTUserInfo=firstName&Humpty&address2&San%20Ricardo%2F12345&username&humptydumpty&hash&121&lastName&Dumpty%0A&address1&789%20Beanstalk%20Avenue&creditCard&&expDate&%0A
+Cookie: MSO=SID&1707413588; MTUserInfo=firstName&Jack&address2&San%20Ricardo%2F12345&username&jackbeanstalk&hash&107&lastName&beanstalk%0A&address1&123%20Beanstalk%20Avenue&creditCard&&expDate&%0A
 

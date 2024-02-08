@@ -2,8 +2,8 @@
 -DCCI
 -D_IDA_XL
 -DWINNT
--IC:\Users\wing2\Desktop\скрипты\UC_3_BuyTicket
+-IC:\Users\wing2\Documents\VuGen\Scripts\UC_3_BuyTicket
 -ID:\HPLoudRunner\include
--ec:\users\wing2\desktop\скрипты\uc_3_buyticket\\logfile.log
-c:\users\wing2\desktop\скрипты\uc_3_buyticket\\combined_UC_3_BuyTicket.c
-c:\users\wing2\desktop\скрипты\uc_3_buyticket\\pre_cci.c
+-ec:\users\wing2\documents\vugen\scripts\uc_3_buyticket\\logfile.log
+c:\users\wing2\documents\vugen\scripts\uc_3_buyticket\\combined_UC_3_BuyTicket.c
+c:\users\wing2\documents\vugen\scripts\uc_3_buyticket\\pre_cci.c

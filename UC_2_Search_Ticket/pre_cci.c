@@ -1,4 +1,4 @@
-# 1 "c:\\users\\wing2\\desktop\\\361\352\360\350\357\362\373\\uc_2_search_ticket\\\\combined_UC_2_Search_Ticket.c"
+# 1 "c:\\users\\wing2\\documents\\vugen\\scripts\\uc_2_search_ticket\\\\combined_UC_2_Search_Ticket.c"
 # 1 "D:\\HPLoudRunner\\include/lrun.h" 1
  
  
@@ -966,7 +966,7 @@ int lr_db_getvalue(char * pFirstArg, ...);
 
 
 
-# 1 "c:\\users\\wing2\\desktop\\\361\352\360\350\357\362\373\\uc_2_search_ticket\\\\combined_UC_2_Search_Ticket.c" 2
+# 1 "c:\\users\\wing2\\documents\\vugen\\scripts\\uc_2_search_ticket\\\\combined_UC_2_Search_Ticket.c" 2
 
 # 1 "D:\\HPLoudRunner\\include/SharedParameter.h" 1
 
@@ -1132,7 +1132,7 @@ extern VTCERR2  lrvtc_noop();
 
 
 
-# 2 "c:\\users\\wing2\\desktop\\\361\352\360\350\357\362\373\\uc_2_search_ticket\\\\combined_UC_2_Search_Ticket.c" 2
+# 2 "c:\\users\\wing2\\documents\\vugen\\scripts\\uc_2_search_ticket\\\\combined_UC_2_Search_Ticket.c" 2
 
 # 1 "globals.h" 1
 
@@ -2608,14 +2608,14 @@ long WebSocketReceiveLen0   = sizeof(WebSocketReceive0) - 1;
 
 
 
-# 3 "c:\\users\\wing2\\desktop\\\361\352\360\350\357\362\373\\uc_2_search_ticket\\\\combined_UC_2_Search_Ticket.c" 2
+# 3 "c:\\users\\wing2\\documents\\vugen\\scripts\\uc_2_search_ticket\\\\combined_UC_2_Search_Ticket.c" 2
 
 # 1 "vuser_init.c" 1
 vuser_init()
 {
 	return 0;
 }
-# 4 "c:\\users\\wing2\\desktop\\\361\352\360\350\357\362\373\\uc_2_search_ticket\\\\combined_UC_2_Search_Ticket.c" 2
+# 4 "c:\\users\\wing2\\documents\\vugen\\scripts\\uc_2_search_ticket\\\\combined_UC_2_Search_Ticket.c" 2
 
 # 1 "Action.c" 1
 Action()
@@ -2678,6 +2678,8 @@ Action()
 		
 		lr_end_transaction("IndexPage", 2);
 		
+		lr_think_time(5);
+		
 		lr_start_transaction("LogIn");
 
 
@@ -2733,6 +2735,8 @@ Action()
 	
 	lr_end_transaction("LogIn", 2);
 	
+	lr_think_time(5);
+	
 	lr_start_transaction("GotoFlight");
 
 
@@ -2772,16 +2776,23 @@ Action()
 	web_add_auto_header("Origin", 
 		"http://localhost:1080");
 
-	lr_think_time(5);
+	
 
 	
 		
 		lr_end_transaction("GotoFlight", 2);
 		
+		lr_think_time(5);
+		
 		lr_start_transaction("SearchTiket");
 		
 		
-		
+		web_reg_save_param_regexp(
+		"ParamName=RandomAircraft",
+		"RegExp=name=\"outboundFlight\" value=\"(.+?)\"",
+		"Ordinal=all",
+		"SEARCH_FILTERS",
+		"LAST");
 		
 		
 
@@ -2817,40 +2828,51 @@ Action()
 		"Name=.cgifields", "Value=seatPref", "ENDITEM",
 		"LAST");
 		
+		lr_save_string(lr_paramarr_random("RandomAircraft"), "outboundFlight");
 
 		
 		lr_end_transaction("SearchTiket", 2);
 		
-		lr_start_transaction("LogOut");
-
-	(web_remove_auto_header("Sec-Fetch-User", "ImplicitGen=Yes", "LAST"));
-
-	lr_think_time(5);
-	
-	web_reg_find("Text=Welcome to the Web Tours site",
+		lr_start_transaction("ChooseAirCraft");
+		
+	web_reg_find("Search=Body",
+		"Text=Payment Details",
 		"LAST");
+		
+		
+		 
 
-	web_url("SignOff Button", 
-		"URL=http://localhost:1080/cgi-bin/welcome.pl?signOff=1", 
-		"TargetFrame=body", 
-		"Resource=0", 
-		"RecContentType=text/html", 
-		"Referer=http://localhost:1080/cgi-bin/nav.pl?page=menu&in=itinerary", 
-		"Snapshot=t28.inf", 
-		"Mode=HTML", 
+	web_submit_data("reservations.pl_2",
+		"Action=http://localhost:1080/cgi-bin/reservations.pl",
+		"Method=POST",
+		"TargetFrame=",
+		"RecContentType=text/html",
+		"Referer=http://localhost:1080/cgi-bin/reservations.pl",
+		"Snapshot=t23.inf",
+		"Mode=HTML",
+		"ITEMDATA",
+		"Name=outboundFlight", "Value={outboundFlight}", "ENDITEM",
+		"Name=numPassengers", "Value={numpass}", "ENDITEM",
+		"Name=advanceDiscount", "Value=0", "ENDITEM",
+		"Name=seatType", "Value={coach}", "ENDITEM",
+		"Name=seatPref", "Value={seatPref}", "ENDITEM",
+		"Name=reserveFlights.x", "Value=53", "ENDITEM",
+		"Name=reserveFlights.y", "Value=10", "ENDITEM",
 		"LAST");
-	lr_end_transaction("LogOut", 2);
+		
+		lr_end_transaction("ChooseAirCraft", 2);
+		
 		
 		lr_end_transaction("UC_2_SearchTicket", 2);
 
 	return 0;
 }
-# 5 "c:\\users\\wing2\\desktop\\\361\352\360\350\357\362\373\\uc_2_search_ticket\\\\combined_UC_2_Search_Ticket.c" 2
+# 5 "c:\\users\\wing2\\documents\\vugen\\scripts\\uc_2_search_ticket\\\\combined_UC_2_Search_Ticket.c" 2
 
 # 1 "vuser_end.c" 1
 vuser_end()
 {
 	return 0;
 }
-# 6 "c:\\users\\wing2\\desktop\\\361\352\360\350\357\362\373\\uc_2_search_ticket\\\\combined_UC_2_Search_Ticket.c" 2
+# 6 "c:\\users\\wing2\\documents\\vugen\\scripts\\uc_2_search_ticket\\\\combined_UC_2_Search_Ticket.c" 2
 

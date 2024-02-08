@@ -115,7 +115,7 @@ value_for_each_vuser=""
 [parameter:letter]
 ColumnName="Col 1"
 Delimiter=","
-GenerateNewVal="EachIteration"
+GenerateNewVal="EachOccurrence"
 OriginalValue=""
 OutOfRangePolicy="ContinueWithLast"
 ParamName="letter"

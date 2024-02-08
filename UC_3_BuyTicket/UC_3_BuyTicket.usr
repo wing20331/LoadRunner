@@ -53,7 +53,7 @@ vuser_init=cci
 Action=cci
 vuser_end=cci
 [TransactionsOrder]
-Order="UC1_Buy_Ticket__*delimiter*__IndexPage__*delimiter*__LogIn__*delimiter*__GotoFlight__*delimiter*__SearchTiket__*delimiter*__ChooseAirCraft__*delimiter*__CreditInfo__*delimiter*__LogOut"
+Order="UC1_Buy_Ticket__*delimiter*__IndexPage__*delimiter*__LogIn__*delimiter*__GotoFlight__*delimiter*__SearchTiket__*delimiter*__ChooseAirCraft__*delimiter*__CreditInfo__*delimiter*__GoToTicket__*delimiter*__LogOut"
 [StateManagement]
 LastReplayStatus=1
 [ActiveReplay]
@@ -67,6 +67,7 @@ GotoFlight=
 SearchTiket=
 ChooseAirCraft=
 CreditInfo=
+GoToTicket=
 LogOut=
 [ParameterSimulation]
 NumVusers=5

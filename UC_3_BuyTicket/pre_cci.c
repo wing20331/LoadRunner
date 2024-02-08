@@ -1,4 +1,4 @@
-# 1 "c:\\users\\wing2\\desktop\\\361\352\360\350\357\362\373\\uc_3_buyticket\\\\combined_UC_3_BuyTicket.c"
+# 1 "c:\\users\\wing2\\documents\\vugen\\scripts\\uc_3_buyticket\\\\combined_UC_3_BuyTicket.c"
 # 1 "D:\\HPLoudRunner\\include/lrun.h" 1
  
  
@@ -966,7 +966,7 @@ int lr_db_getvalue(char * pFirstArg, ...);
 
 
 
-# 1 "c:\\users\\wing2\\desktop\\\361\352\360\350\357\362\373\\uc_3_buyticket\\\\combined_UC_3_BuyTicket.c" 2
+# 1 "c:\\users\\wing2\\documents\\vugen\\scripts\\uc_3_buyticket\\\\combined_UC_3_BuyTicket.c" 2
 
 # 1 "D:\\HPLoudRunner\\include/SharedParameter.h" 1
 
@@ -1132,7 +1132,7 @@ extern VTCERR2  lrvtc_noop();
 
 
 
-# 2 "c:\\users\\wing2\\desktop\\\361\352\360\350\357\362\373\\uc_3_buyticket\\\\combined_UC_3_BuyTicket.c" 2
+# 2 "c:\\users\\wing2\\documents\\vugen\\scripts\\uc_3_buyticket\\\\combined_UC_3_BuyTicket.c" 2
 
 # 1 "globals.h" 1
 
@@ -2608,14 +2608,14 @@ long WebSocketReceiveLen0   = sizeof(WebSocketReceive0) - 1;
 
 
 
-# 3 "c:\\users\\wing2\\desktop\\\361\352\360\350\357\362\373\\uc_3_buyticket\\\\combined_UC_3_BuyTicket.c" 2
+# 3 "c:\\users\\wing2\\documents\\vugen\\scripts\\uc_3_buyticket\\\\combined_UC_3_BuyTicket.c" 2
 
 # 1 "vuser_init.c" 1
 vuser_init()
 {
 	return 0;
 }
-# 4 "c:\\users\\wing2\\desktop\\\361\352\360\350\357\362\373\\uc_3_buyticket\\\\combined_UC_3_BuyTicket.c" 2
+# 4 "c:\\users\\wing2\\documents\\vugen\\scripts\\uc_3_buyticket\\\\combined_UC_3_BuyTicket.c" 2
 
 # 1 "Action.c" 1
 Action()
@@ -2685,6 +2685,8 @@ lr_start_transaction("UC1_Buy_Ticket");
 		
 		lr_end_transaction("IndexPage", 2);
 		
+		lr_think_time(5);
+		
 		lr_start_transaction("LogIn");
 
 
@@ -2740,6 +2742,8 @@ lr_start_transaction("UC1_Buy_Ticket");
 	
 	lr_end_transaction("LogIn", 2);
 	
+	lr_think_time(5);
+	
 	lr_start_transaction("GotoFlight");
 
 
@@ -2779,11 +2783,13 @@ lr_start_transaction("UC1_Buy_Ticket");
 	web_add_auto_header("Origin", 
 		"http://localhost:1080");
 
-	lr_think_time(5);
+	
 
 	
 		
 		lr_end_transaction("GotoFlight", 2);
+		
+		lr_think_time(5);
 		
 		lr_start_transaction("SearchTiket");
 		
@@ -2836,6 +2842,8 @@ lr_start_transaction("UC1_Buy_Ticket");
 
 	
 		lr_end_transaction("SearchTiket", 2);
+		
+		lr_think_time(5);
 		
 		lr_start_transaction("ChooseAirCraft");
 		
@@ -2914,6 +2922,29 @@ sprintf(itemDataBuffer + strlen(itemDataBuffer),
 	
 lr_end_transaction("CreditInfo", 2);
 
+lr_think_time(5);
+	
+	lr_start_transaction("GoToTicket");
+
+
+	
+	web_reg_find("Text=User wants the intineraries",
+		"LAST");
+
+	web_url("Itinerary Button", 
+		"URL=http://localhost:1080/cgi-bin/welcome.pl?page=itinerary", 
+		"TargetFrame=body", 
+		"Resource=0", 
+		"RecContentType=text/html", 
+		"Referer=http://localhost:1080/cgi-bin/nav.pl?page=menu&in=home", 
+		"Snapshot=t27.inf", 
+		"Mode=HTML", 
+		"LAST");
+	
+	lr_end_transaction("GoToTicket", 2);
+
+lr_think_time(5);
+
 lr_start_transaction("LogOut");
 
 	(web_remove_auto_header("Sec-Fetch-User", "ImplicitGen=Yes", "LAST"));
@@ -2939,12 +2970,12 @@ lr_end_transaction("UC1_Buy_Ticket", 2);
 
 	return 0;
 }
-# 5 "c:\\users\\wing2\\desktop\\\361\352\360\350\357\362\373\\uc_3_buyticket\\\\combined_UC_3_BuyTicket.c" 2
+# 5 "c:\\users\\wing2\\documents\\vugen\\scripts\\uc_3_buyticket\\\\combined_UC_3_BuyTicket.c" 2
 
 # 1 "vuser_end.c" 1
 vuser_end()
 {
 	return 0;
 }
-# 6 "c:\\users\\wing2\\desktop\\\361\352\360\350\357\362\373\\uc_3_buyticket\\\\combined_UC_3_BuyTicket.c" 2
+# 6 "c:\\users\\wing2\\documents\\vugen\\scripts\\uc_3_buyticket\\\\combined_UC_3_BuyTicket.c" 2
 

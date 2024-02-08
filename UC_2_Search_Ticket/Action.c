@@ -58,6 +58,8 @@ Action()
 		
 		lr_end_transaction("IndexPage", LR_AUTO);
 		
+		lr_think_time(5);
+		
 		lr_start_transaction("LogIn");
 
 
@@ -113,6 +115,8 @@ Action()
 	
 	lr_end_transaction("LogIn", LR_AUTO);
 	
+	lr_think_time(5);
+	
 	lr_start_transaction("GotoFlight");
 
 
@@ -152,16 +156,23 @@ Action()
 	web_add_auto_header("Origin", 
 		"http://localhost:1080");
 
-	lr_think_time(5);
+	
 
 	
 		
 		lr_end_transaction("GotoFlight", LR_AUTO);
 		
+		lr_think_time(5);
+		
 		lr_start_transaction("SearchTiket");
 		
 		
-		
+		web_reg_save_param_regexp(
+		"ParamName=RandomAircraft",
+		"RegExp=name=\"outboundFlight\" value=\"(.+?)\"",
+		"Ordinal=all",
+		SEARCH_FILTERS,
+		LAST);
 		
 		
 
@@ -197,29 +208,40 @@ Action()
 		"Name=.cgifields", "Value=seatPref", ENDITEM,
 		LAST);
 		
+		lr_save_string(lr_paramarr_random("RandomAircraft"), "outboundFlight");
 
 		
 		lr_end_transaction("SearchTiket", LR_AUTO);
 		
-		lr_start_transaction("LogOut");
-
-	web_revert_auto_header("Sec-Fetch-User");
-
-	lr_think_time(5);
-	
-	web_reg_find("Text=Welcome to the Web Tours site",
+		lr_start_transaction("ChooseAirCraft");
+		
+	web_reg_find("Search=Body",
+		"Text=Payment Details",
 		LAST);
+		
+		
+		 
 
-	web_url("SignOff Button", 
-		"URL=http://localhost:1080/cgi-bin/welcome.pl?signOff=1", 
-		"TargetFrame=body", 
-		"Resource=0", 
-		"RecContentType=text/html", 
-		"Referer=http://localhost:1080/cgi-bin/nav.pl?page=menu&in=itinerary", 
-		"Snapshot=t28.inf", 
-		"Mode=HTML", 
+	web_submit_data("reservations.pl_2",
+		"Action=http://localhost:1080/cgi-bin/reservations.pl",
+		"Method=POST",
+		"TargetFrame=",
+		"RecContentType=text/html",
+		"Referer=http://localhost:1080/cgi-bin/reservations.pl",
+		"Snapshot=t23.inf",
+		"Mode=HTML",
+		ITEMDATA,
+		"Name=outboundFlight", "Value={outboundFlight}", ENDITEM,
+		"Name=numPassengers", "Value={numpass}", ENDITEM,
+		"Name=advanceDiscount", "Value=0", ENDITEM,
+		"Name=seatType", "Value={coach}", ENDITEM,
+		"Name=seatPref", "Value={seatPref}", ENDITEM,
+		"Name=reserveFlights.x", "Value=53", ENDITEM,
+		"Name=reserveFlights.y", "Value=10", ENDITEM,
 		LAST);
-	lr_end_transaction("LogOut", LR_AUTO);
+		
+		lr_end_transaction("ChooseAirCraft", LR_AUTO);
+		
 		
 		lr_end_transaction("UC_2_SearchTicket", LR_AUTO);
 

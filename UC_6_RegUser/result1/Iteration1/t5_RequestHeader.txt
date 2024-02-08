@@ -1,0 +1,17 @@
+GET /cgi-bin/welcome.pl?page=menus HTTP/1.1
+Referer: http://localhost:1080/cgi-bin/login.pl
+Sec-Fetch-User: ?1
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+DNT: 1
+Sec-GPC: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0
+Accept-Encoding: gzip, deflate
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
+Accept: */*
+Connection: Keep-Alive
+Host: localhost:1080
+Cookie: MSO=SID&1707414097; MTUserInfo=firstName&Little&address2&San%20Ricardo%2F12345&username&tGFfRErxfAr&hash&82&lastName&Red&address1&456%20Grandma%27s%20House%20Lane&creditCard&&expDate&
+

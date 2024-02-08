@@ -82,6 +82,8 @@ lr_start_transaction("UC_6_addUser");
 		
 		lr_end_transaction("IndexPage", LR_AUTO);
 		
+		lr_think_time(5);
+		
 		lr_start_transaction("SignUp");
 
 
@@ -99,8 +101,7 @@ lr_start_transaction("UC_6_addUser");
 	web_add_auto_header("Upgrade-Insecure-Requests", 
 		"1");
 
-	lr_think_time(5);
-	
+		
 	
 
 	web_submit_form("login.pl", 
@@ -140,11 +141,12 @@ lr_start_transaction("UC_6_addUser");
 
 	lr_end_transaction("SignUp", LR_AUTO);
 	
+	lr_think_time(5);
+	
 	lr_start_transaction("LogOut");
 
 	web_revert_auto_header("Sec-Fetch-User");
 
-	lr_think_time(5);
 	
 	web_reg_find("Text=Welcome to the Web Tours site",
 		LAST);

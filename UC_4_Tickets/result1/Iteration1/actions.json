@@ -6,34 +6,62 @@
                 "stepId": "STEP1",
                 "stepName": "Url: webtours",
                 "infFile": "t2.inf",
-                "time": 1707153427725
+                "time": 1707314917814
             },
             {
                 "stepId": "STEP2",
                 "stepName": "Submit Data: login.pl",
                 "infFile": "t3.inf",
-                "time": 1707153428081
+                "time": 1707314923214
             },
             {
                 "stepId": "STEP3",
                 "stepName": "Url: Itinerary Button",
                 "infFile": "t4.inf",
-                "time": 1707153428352
+                "time": 1707314928581
             },
             {
                 "stepId": "STEP4",
                 "stepName": "Url: SignOff Button",
                 "infFile": "t5.inf",
-                "time": 1707153428610
+                "time": 1707314933838
             }
         ],
         "transactions": [
             {
-                "transactionName": "UC_4_Tickets",
-                "rawStartTime": 1707153427174,
-                "rawEndTime": 1707153428614,
+                "transactionName": "GoToIndex",
+                "rawStartTime": 1707314917427,
+                "rawEndTime": 1707314917918,
                 "thinkTime": 0.0,
-                "wastedTime": 0.18718385696411134
+                "wastedTime": 0.14050507545471192
+            },
+            {
+                "transactionName": "LogIn",
+                "rawStartTime": 1707314922957,
+                "rawEndTime": 1707314923257,
+                "thinkTime": 0.0,
+                "wastedTime": 0.010349273681640625
+            },
+            {
+                "transactionName": "GoToTicket",
+                "rawStartTime": 1707314928291,
+                "rawEndTime": 1707314928588,
+                "thinkTime": 0.0,
+                "wastedTime": 0.011695146560668946
+            },
+            {
+                "transactionName": "LogOut",
+                "rawStartTime": 1707314933625,
+                "rawEndTime": 1707314933847,
+                "thinkTime": 0.0,
+                "wastedTime": 0.007783174514770508
+            },
+            {
+                "transactionName": "UC_4_Tickets",
+                "rawStartTime": 1707314917255,
+                "rawEndTime": 1707314933862,
+                "thinkTime": 15.013399999999998,
+                "wastedTime": 0.1748487949371338
             }
         ]
     }

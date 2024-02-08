@@ -2677,6 +2677,8 @@ Action()
 		
 		lr_end_transaction("IndexPage", 2);
 		
+		lr_think_time(5);
+		
 		lr_start_transaction("LogIn");
 
 
@@ -2732,6 +2734,42 @@ Action()
 	
 	lr_end_transaction("LogIn", 2);
 	
+	lr_think_time(5);
+	
+	lr_start_transaction("GotoFlight");
+
+
+		
+		web_reg_find("Search=Body",
+		"Text=Departure City",
+		"LAST");
+		
+				
+			
+
+	
+
+	web_url("Search Flights Button", 
+		"URL=http://localhost:1080/cgi-bin/welcome.pl?page=search", 
+		"TargetFrame=body", 
+		"Resource=0", 
+		"RecContentType=text/html", 
+		"Referer=http://localhost:1080/cgi-bin/nav.pl?page=menu&in=home", 
+		"Snapshot=t21.inf", 
+		"Mode=HTML", 
+		"LAST");
+	
+
+	web_add_auto_header("Origin", 
+		"http://localhost:1080");
+
+	
+
+	
+		
+		lr_end_transaction("GotoFlight", 2);
+	
+	lr_think_time(5);	
 	
 	lr_start_transaction("LogOut");
 

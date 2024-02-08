@@ -118,7 +118,9 @@ Action()
 	
 	lr_end_transaction("LogIn", LR_AUTO);
 	
-	lr_start_transaction("GoToFligth");
+	lr_think_time(5);
+	
+	lr_start_transaction("GoFlight");
 
 	
 	
@@ -151,8 +153,9 @@ Action()
 		LAST);
 		
 		
-		lr_end_transaction("GoToFligth", LR_AUTO);
+		lr_end_transaction("GoFlight", LR_AUTO);
 		
+		lr_think_time(5);
 		
 		lr_start_transaction("DeleteTicket");
 
@@ -187,26 +190,6 @@ Action()
 	lr_end_transaction("DeleteTicket", LR_AUTO);
 
 	
-	lr_start_transaction("LogOut");
-
-	web_revert_auto_header("Sec-Fetch-User");
-
-	lr_think_time(5);
-	
-	web_reg_find("Text=Welcome to the Web Tours site",
-		LAST);
-
-	web_url("SignOff Button", 
-		"URL=http://localhost:1080/cgi-bin/welcome.pl?signOff=1", 
-		"TargetFrame=body", 
-		"Resource=0", 
-		"RecContentType=text/html", 
-		"Referer=http://localhost:1080/cgi-bin/nav.pl?page=menu&in=itinerary", 
-		"Snapshot=t28.inf", 
-		"Mode=HTML", 
-		LAST);
-	
-	lr_end_transaction("LogOut", LR_AUTO);
 	
 	
 	lr_end_transaction("UC_5_Delete", LR_AUTO);

@@ -2,8 +2,8 @@
 -DCCI
 -D_IDA_XL
 -DWINNT
--IC:\Users\wing2\Documents\VuGen\Scripts\UC_1_Login
+-IC:\Users\wing2\Documents\VuGen\Scripts\UC_6_RegUser
 -ID:\HPLoudRunner\include
--ec:\users\wing2\documents\vugen\scripts\uc_1_login\\logfile.log
-c:\users\wing2\documents\vugen\scripts\uc_1_login\\combined_UC_1_Login.c
-c:\users\wing2\documents\vugen\scripts\uc_1_login\\pre_cci.c
+-ec:\users\wing2\documents\vugen\scripts\uc_6_reguser\\logfile.log
+c:\users\wing2\documents\vugen\scripts\uc_6_reguser\\combined_UC_6_RegUser.c
+c:\users\wing2\documents\vugen\scripts\uc_6_reguser\\pre_cci.c

@@ -53,7 +53,7 @@ vuser_init=cci
 Action=cci
 vuser_end=cci
 [TransactionsOrder]
-Order="UC_1_LogInLogOut__*delimiter*__IndexPage__*delimiter*__LogIn__*delimiter*__LogOut"
+Order="UC_1_LogInLogOut__*delimiter*__IndexPage__*delimiter*__LogIn__*delimiter*__GotoFlight__*delimiter*__LogOut"
 [StateManagement]
 LastReplayStatus=1
 [ActiveReplay]
@@ -63,6 +63,7 @@ ActiveRunName=result1
 UC_1_LogInLogOut=
 IndexPage=
 LogIn=
+GotoFlight=
 LogOut=
 [ParameterSimulation]
 NumVusers=5

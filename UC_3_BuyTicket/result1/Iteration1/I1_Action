@@ -11,9 +11,12 @@ Pass1=t7
 Pass2=t10
 PassCount=2
 Pass1=t9
+[t27]
+PassCount=1
+Pass1=t11
+[t28]
+PassCount=1
+Pass1=t12
 [t19]
 PassCount=1
 Pass1=t2
-[t28]
-PassCount=1
-Pass1=t11
