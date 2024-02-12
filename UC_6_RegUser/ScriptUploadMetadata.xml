@@ -14,9 +14,9 @@
     <FileEntry Name="UC_6_RegUser.prm" Filter="2" />
     <FileEntry Name="globals.h" Filter="2" />
     <FileEntry Name="WebSocketBuffer.h" Filter="2" />
-    <FileEntry Name="seatPref.dat" Filter="2" />
     <FileEntry Name="combined_UC_6_RegUser.c" Filter="2" />
     <FileEntry Name="pre_cci.c" Filter="2" />
+    <FileEntry Name="160183774440.idx" Filter="1" />
     <FileEntry Name="212619004440.idx" Filter="1" />
     <FileEntry Name="239507475440.idx" Filter="1" />
     <FileEntry Name="27089760440.idx" Filter="1" />
@@ -36,10 +36,15 @@
     <FileEntry Name="logfile.log" Filter="1" />
     <FileEntry Name="lrw_custom_body.h" Filter="1" />
     <FileEntry Name="mdrv.log" Filter="1" />
+    <FileEntry Name="mdrv0Jb.649.log" Filter="1" />
     <FileEntry Name="mdrv31C.573.log" Filter="1" />
+    <FileEntry Name="mdrvcBD.623.log" Filter="1" />
     <FileEntry Name="mdrvdFy.565.log" Filter="1" />
     <FileEntry Name="mdrvn0j.923.log" Filter="1" />
+    <FileEntry Name="mdrvpXR.913.log" Filter="1" />
     <FileEntry Name="mdrvSk2.731.log" Filter="1" />
+    <FileEntry Name="mdrvWw7.421.log" Filter="1" />
+    <FileEntry Name="mdrvXUd.843.log" Filter="1" />
     <FileEntry Name="mdrvyfe.607.log" Filter="1" />
     <FileEntry Name="mdrv_cmd.txt" Filter="1" />
     <FileEntry Name="NewParam(1).dat" Filter="1" />
@@ -55,6 +60,7 @@
     <FileEntry Name="OutputColoringDatabase.json" Filter="1" />
     <FileEntry Name="ReplaySummaryReport.xml" Filter="1" />
     <FileEntry Name="ScriptUploadMetadata.xml" Filter="1" />
+    <FileEntry Name="seatPref.dat" Filter="1" />
     <FileEntry Name="ThumbnailsCache.tmp" Filter="1" />
     <FileEntry Name="TransactionsData.db" Filter="1" />
     <FileEntry Name="UC_1_Login.prm.bak" Filter="1" />

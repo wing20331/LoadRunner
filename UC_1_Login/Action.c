@@ -85,7 +85,7 @@ Action()
 		"same-origin");
 	
 	web_reg_find("Search=Body",
-		"Text=User password was correct",
+		"Text=Welcome, <b>{login}</b>",
 		LAST);
 
 	web_submit_data("login.pl",
@@ -126,8 +126,6 @@ Action()
 		
 				
 			
-
-	
 
 	web_url("Search Flights Button", 
 		"URL=http://localhost:1080/cgi-bin/welcome.pl?page=search", 

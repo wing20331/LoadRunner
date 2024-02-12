@@ -18,6 +18,7 @@
     <FileEntry Name="pre_cci.c" Filter="2" />
     <FileEntry Name="10068868440.idx" Filter="1" />
     <FileEntry Name="147099556440.idx" Filter="1" />
+    <FileEntry Name="153322533440.idx" Filter="1" />
     <FileEntry Name="178783854440.idx" Filter="1" />
     <FileEntry Name="83355294440.idx" Filter="1" />
     <FileEntry Name="Bookmarks.xml" Filter="1" />
@@ -35,10 +36,15 @@
     <FileEntry Name="logfile.log" Filter="1" />
     <FileEntry Name="lrw_custom_body.h" Filter="1" />
     <FileEntry Name="mdrv.log" Filter="1" />
+    <FileEntry Name="mdrvb8N.201.log" Filter="1" />
+    <FileEntry Name="mdrvbTm.769.log" Filter="1" />
     <FileEntry Name="mdrvhYr.633.log" Filter="1" />
+    <FileEntry Name="mdrvJ0l.189.log" Filter="1" />
     <FileEntry Name="mdrvp4z.631.log" Filter="1" />
     <FileEntry Name="mdrvRZo.881.log" Filter="1" />
+    <FileEntry Name="mdrvvUN.297.log" Filter="1" />
     <FileEntry Name="mdrvvvw.777.log" Filter="1" />
+    <FileEntry Name="mdrvzdN.607.log" Filter="1" />
     <FileEntry Name="mdrvZk6.353.log" Filter="1" />
     <FileEntry Name="mdrv_cmd.txt" Filter="1" />
     <FileEntry Name="NewParam(1).dat" Filter="1" />

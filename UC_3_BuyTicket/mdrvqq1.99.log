@@ -1,0 +1,161 @@
+Action.c(337):     <title>Web Tours</title>\n
+Action.c(337):        <!-- Frame Set -->\n
+Action.c(337):        <frameset cols="160,*" border="1" frameborder="1">\n
+Action.c(337):           <!-- Navigation Frame -->\n
+Action.c(337):           <frame src="nav.pl?in=home" name="navbar" marginheight="2" marginwidth="2" \n
+Action.c(337):                 noresize="noresize" scrolling="auto"/>\n
+Action.c(337):           <!-- Home Frame -->\n
+Action.c(337):           <frame src="/WebTours/home.html" name="info" marginheight="2" marginwidth="2" \n
+Action.c(337):                 noresize="noresize" scrolling="auto"/>\n
+Action.c(337):        </frameset>\n
+Action.c(337):     </html>\n
+Action.c(337):     \n
+Action.c(337):     </body>\n
+Action.c(337):     </html>
+Action.c(337): Detected non-resource "http://localhost:1080/cgi-bin/nav.pl?in=home" in "http://localhost:1080/cgi-bin/welcome.pl?signOff=1"  	[MsgId: MMSG-26574]
+Action.c(337): Detected non-resource "http://localhost:1080/WebTours/home.html" in "http://localhost:1080/cgi-bin/welcome.pl?signOff=1"  	[MsgId: MMSG-26574]
+Action.c(337): Retrieving data from cache for "http://localhost:1080/WebTours/home.html"  	[MsgId: MMSG-26558]
+Action.c(337): t=6228381ms: 1361-byte response body retrieved from cache for "http://localhost:1080/WebTours/home.html" (RelFrameId=1.2, Internal ID=462)
+Action.c(337):     <HTML>\n
+Action.c(337):     <HEAD>\n
+Action.c(337):     \t<title>Web Tours</title>\n
+Action.c(337):     </HEAD>\n
+Action.c(337):     <style>\n
+Action.c(337):     \tblockquote {font-family: tahoma; font-size : 10pt}\n
+Action.c(337):     \tH1 {font-family: tahoma; font-size : 22pt; color: #003366}\n
+Action.c(337):     \tsmall {font-family: tahoma; font-size : 8pt}\n
+Action.c(337):     \tH3{font-family: tahoma; font-size : 10pt; color: black}\n
+Action.c(337):     \tA {FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Tahoma; TEXT-DECORATIO
+Action.c(337):     N: none}\n
+Action.c(337):     \tA:hover{ FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #993333; FONT-FAMILY: Tahoma;TEXT-DE
+Action.c(337):     CORATION: underline}\n
+Action.c(337):     \tTD {font-family: tahoma; font-size : 10pt; color: black}\n
+Action.c(337):     </style>\n
+Action.c(337):     <body bgcolor="#e0e7f1">\n
+Action.c(337):     <BR/>\n
+Action.c(337):     <BR/>\n
+Action.c(337):     <BR/>\n
+Action.c(337):     <br/>\n
+Action.c(337):     <table border="0">\n
+Action.c(337):     <tr><td></td></tr>\n
+Action.c(337):     <TR><TD></TD></TR>\n
+Action.c(337):     <TR><TD>\n
+Action.c(337):     <blockquote>\n
+Action.c(337):     <H1><b>Web Tours</b></H1>\n
+Action.c(337):     Welcome to the Web Tours site.\n
+Action.c(337):     <br/>\n
+Action.c(337):     To make reservations,please enter your account information to the left.\n
+Action.c(337):     <br/>\n
+Action.c(337):     If you haven't registered yet, <A href="/cgi-bin/login.pl?username=&amp;password=&amp;getI
+Action.c(337):     nfo=true" ><B>sign up now</B></A> to get access to all our resources.\n
+Action.c(337):     <br/>\n
+Action.c(337):     To configure the server options, use <A href="/cgi-bin/admin.pl" target="body" ><b>adminis
+Action.c(337):     tration</b></A> link.\n
+Action.c(337):     <br/><br/><br/><br/><br/><br/>\n
+Action.c(337):     <br/><small>\n
+Action.c(337):     This product uses parts of the SMT Kernel, Copyright (c) 1991-99 <A href="http://www.imati
+Action.c(337):     x.com" target="new"><B><small>iMatix Corporation</small></B></A> \n
+Action.c(337):     </small>\n
+Action.c(337):     </blockquote></TD>\n
+Action.c(337):     <TD></TD></TR>\n
+Action.c(337):     </table>\n
+Action.c(337):     </body>\n
+Action.c(337):     </HTML>\n
+Action.c(337): t=6228383ms: 5-byte chunked response overhead for "http://localhost:1080/cgi-bin/welcome.pl?signOff=1" (RelFrameId=1, Internal ID=460)
+Action.c(337):     0\r\n
+Action.c(337):     \r\n
+Action.c(337): t=6228383ms: Request done "http://localhost:1080/cgi-bin/welcome.pl?signOff=1"  	[MsgId: MMSG-26000]
+Action.c(337): t=6228383ms: Connecting [1] to host 127.0.0.1:1080  	[MsgId: MMSG-26000]
+Action.c(337): t=6228384ms: Connected socket [1] from 127.0.0.1:62553 to 127.0.0.1:1080 in 1 ms  	[MsgId: MMSG-26000]
+Action.c(337): t=6228384ms: 466-byte request headers for "http://localhost:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.1, Internal ID=461)
+Action.c(337):     GET /cgi-bin/nav.pl?in=home HTTP/1.1\r\n
+Action.c(337):     Referer: http://localhost:1080/cgi-bin/welcome.pl?signOff=1\r\n
+Action.c(337):     Sec-Fetch-Dest: frame\r\n
+Action.c(337):     Sec-Fetch-Site: same-origin\r\n
+Action.c(337):     Sec-Fetch-Mode: navigate\r\n
+Action.c(337):     DNT: 1\r\n
+Action.c(337):     Sec-GPC: 1\r\n
+Action.c(337):     User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122
+Action.c(337):     .0\r\n
+Action.c(337):     Accept-Encoding: gzip, deflate\r\n
+Action.c(337):     Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3\r\n
+Action.c(337):     Accept: */*\r\n
+Action.c(337):     Connection: Keep-Alive\r\n
+Action.c(337):     Host: localhost:1080\r\n
+Action.c(337):     Cookie: MSO=SID&1707486614\r\n
+Action.c(337):     \r\n
+Action.c(337): t=6228429ms: 256-byte response headers for "http://localhost:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.1, Internal ID=461)
+Action.c(337):     HTTP/1.1 200 OK\r\n
+Action.c(337):     Date: Fri, 09 Feb 2024 13:50:14 GMT\r\n
+Action.c(337):     Server: Apache/2.2.21 (Win32)\r\n
+Action.c(337):     Expires: Thu, 08 Feb 2024 13:50:14 GMT\r\n
+Action.c(337):     Keep-Alive: timeout=5, max=100\r\n
+Action.c(337):     Connection: Keep-Alive\r\n
+Action.c(337):     Transfer-Encoding: chunked\r\n
+Action.c(337):     Content-Type: text/html; charset=ISO-8859-1\r\n
+Action.c(337):     \r\n
+Action.c(337): t=6228429ms: 5-byte chunked response overhead for "http://localhost:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.1, Internal ID=461)
+Action.c(337):     5d1\r\n
+Action.c(337): t=6228430ms: 2-byte chunked response overhead for "http://localhost:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.1, Internal ID=461)
+Action.c(337):     \r\n
+Action.c(337): t=6228430ms: 1489-byte chunked response body for "http://localhost:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.1, Internal ID=461)
+Action.c(337):     <!DOCTYPE html\n
+Action.c(337):     \tPUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"\n
+Action.c(337):     \t "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n
+Action.c(337):     <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">\n
+Action.c(337):     <head>\n
+Action.c(337):     <title>Web Tours Navigation Bar</title>\n
+Action.c(337):     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />\n
+Action.c(337):     </head>\n
+Action.c(337):     <body bgcolor="#E0E7F1">\n
+Action.c(337):     <style>\n
+Action.c(337):     blockquote {font-family: tahoma; font-size : 10pt}\n
+Action.c(337):     H1 {font-family: tahoma; font-size : 22pt; color: #993333}\n
+Action.c(337):     H3 {font-family: tahoma; font-size : 10pt; color: black}\n
+Action.c(337):     small {font-family: tahoma; font-size : 8pt}\n
+Action.c(337):     </style>\n
+Action.c(337):     <form method="post" action="/cgi-bin/login.pl" target="body">\n
+Action.c(337):     <input type="hidden" name="userSession" value="138314.023005265HVVtfcHpffiDDDDDtcziHpVzfDf
+Action.c(337):     "/>\n
+Action.c(337):     <table border="0"><tr><td>&nbsp;</td>\n
+Action.c(337):     <td>&nbsp;</td></tr>\n
+Action.c(337):     <tr><td>&nbsp;</td>\n
+Action.c(337):     <td>&nbsp;</td></tr>\n
+Action.c(337):     <tr><td>&nbsp;</td>\n
+Action.c(337):     <td><small>&nbsp;Username</small></td></tr>\n
+Action.c(337):     <tr><td>&nbsp;</td>\n
+Action.c(337):     <td><input type="text" name="username" value="" size="14" maxlength="14"/></td></tr>\n
+Action.c(337):     <tr><td>&nbsp;</td>\n
+Action.c(337):     <td><small>&nbsp;Password</small></td>\n
+Action.c(337):     <tr><td>&nbsp;</td>\n
+Action.c(337):     <td><input type="password" name="password" value="" size="14" maxlength="14"/></td></tr>\n
+Action.c(337):     <tr><td>&nbsp;</td>\n
+Action.c(337):     <td>&nbsp;</td></tr>\n
+Action.c(337):     <tr><td>&nbsp;</td>\n
+Action.c(337):     <td><input type="image" name="login" value="Login" alt="Login" border="1" \n
+Action.c(337):     src="/WebTours/images/mer_login.gif"/></td></tr>\n
+Action.c(337):     <tr><td>&nbsp;</td><td>&nbsp;</td></tr>\n
+Action.c(337):     </table><input type="hidden" name="JSFormSubmit" value="off"/>\n
+Action.c(337):     </form>\n
+Action.c(337):     \n
+Action.c(337):     </body>\n
+Action.c(337):     </html>\n
+Action.c(337): Resource "http://localhost:1080/WebTours/images/mer_login.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(337): t=6228432ms: 5-byte chunked response overhead for "http://localhost:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.1, Internal ID=461)
+Action.c(337):     0\r\n
+Action.c(337):     \r\n
+Action.c(337): t=6228432ms: Request done "http://localhost:1080/cgi-bin/nav.pl?in=home"  	[MsgId: MMSG-26000]
+Action.c(337): Registered web_reg_find successful for "Text=Welcome to the Web Tours site" (count=1)  	[MsgId: MMSG-26364]
+Action.c(337): web_url("SignOff Button") was successful, 2175 body bytes, 584 header bytes, 24 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(346): Notify: Transaction "LogOut" ended with a "Pass" status (Duration: 5,1070 Think Time: 5,0062 Wasted Time: 0,0000).	[MsgId: MMSG-16870]
+Action.c(349): Notify: Transaction "UC1_Buy_Ticket" ended with a "Pass" status (Duration: 40,8921 Think Time: 40,0562 Wasted Time: 0,0032).	[MsgId: MMSG-16870]
+Ending action Action.	[MsgId: MMSG-15918]
+Action was aborted.	[MsgId: MMSG-10694]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+t=6228433ms: Closed connection [0] to localhost:1080 after completing 1 request(s)  	[MsgId: MMSG-26000]
+t=6228433ms: Closed connection [1] to localhost:1080 after completing 1 request(s)  	[MsgId: MMSG-26000]
+HTML-Mode memory management statistics: Reusable=24, NonReusable=0, CsMemBlockSize=4096, checks disabled  	[MsgId: MMSG-26000]
+Vuser 14 (thread 12920), ended OK."	[MsgId: MMSG-10695]

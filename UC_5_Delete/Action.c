@@ -2,7 +2,8 @@ Action()
 {
 	
 	int i;
-	int rndint;
+	int rndint = atoi(lr_eval_string("{rnd}"));
+	
 	
 	lr_start_transaction("UC_5_Delete");
 
@@ -89,7 +90,7 @@ Action()
 		"same-origin");
 	
 	web_reg_find("Search=Body",
-		"Text=User password was correct",
+		"Text=Welcome, <b>{login}</b>",
 		LAST);
 
 	web_submit_data("login.pl",
@@ -120,75 +121,96 @@ Action()
 	
 	lr_think_time(5);
 	
-	lr_start_transaction("GoFlight");
+	 lr_start_transaction("GoToTicket");
 
-	
-	
-	rndint = atoi(lr_eval_string("{rnd}"));
-	
-	for(i = 1; i <= rndint;i++){
-	
-  
-		web_reg_save_param_attrib(
-		"ParamName=flightID",
-		"TagName=input",
-		"Extract=value",
-		"Name=flightID",
-		"Type=hidden",
-		"NotFound=Warning",
-		SEARCH_FILTERS,
-		"IgnoreRedirections=No",
-		"RequestUrl=*/itinerary.pl*",
+	web_reg_find("Search=Body",
+		"Text=User wants the intineraries.",
 		LAST);
-		
-		
-		web_url("Itinerary Button", 
+
+    web_reg_save_param("c_flightids",
+    "lb=<input type=\"hidden\" name=\"flightID\" value=\"",
+    "rb=\"  />",
+    "ord=all",
+    LAST);
+
+
+    web_reg_save_param("c_cgifields",
+    "lb=<input type=\"hidden\" name=\".cgifields\" value=\"",
+    "rb=\"  />",
+    "ord=all",
+    LAST);
+	 
+	 
+
+   web_url("Itinerary Button", 
 		"URL=http://localhost:1080/cgi-bin/welcome.pl?page=itinerary", 
 		"TargetFrame=body", 
 		"Resource=0", 
 		"RecContentType=text/html", 
 		"Referer=http://localhost:1080/cgi-bin/nav.pl?page=menu&in=home", 
-		"Snapshot=t12.inf", 
+		"Snapshot=t27.inf", 
 		"Mode=HTML", 
 		LAST);
-		
-		
-		lr_end_transaction("GoFlight", LR_AUTO);
-		
-		lr_think_time(5);
-		
-		lr_start_transaction("DeleteTicket");
 
-
-		
-		web_add_header("Origin", 
-		"http://localhost:1080");
-	
-
-
-	web_submit_data("itinerary.pl",
-		"Action=http://localhost:1080/cgi-bin/itinerary.pl",
-		"Method=POST",
-		"TargetFrame=",
-		"RecContentType=text/html",
-		"Referer=http://localhost:1080/cgi-bin/itinerary.pl",
-		"Snapshot=t13.inf",
-		"Mode=HTML",
-		ITEMDATA,
-		"Name=1", "Value=on", ENDITEM,
-		"Name=flightID", "Value={flightID}", ENDITEM,
-		"Name=removeFlights.x", "Value=49", ENDITEM,
-		"Name=removeFlights.y", "Value=11", ENDITEM,
-		"Name=.cgifields", "Value=1", ENDITEM,
-		"Name=.cgifields", "Value=3", ENDITEM,
-		"Name=.cgifields", "Value=2", ENDITEM,
-		LAST);
+    lr_end_transaction("GoToTicket", LR_AUTO);
     
-	}
-	
-	
-	lr_end_transaction("DeleteTicket", LR_AUTO);
+    
+    
+    if(rndint >= atoi(lr_eval_string("{c_flightids_count}"))){
+    	rndint = atoi(lr_eval_string("{c_flightids_count}"));
+    }
 
+  
+
+    lr_save_string("", "c_buffer");
+
+    for (i=1;i<=rndint;i++)
+    {
+        lr_param_sprintf("c_buffer", "%s%d=on&", lr_eval_string("{c_buffer}"), i);
+    }
+
+
+
+
+    for (i=1;i<=atoi(lr_eval_string("{c_flightids_count}"));i++)
+    {
+        lr_param_sprintf("c_buffer",
+        "%sflightID=%s&",
+        lr_eval_string("{c_buffer}"),
+        lr_paramarr_idx("c_flightids",
+        i));
+
+        lr_param_sprintf("c_buffer",
+        "%s.cgifields=%s&",
+        lr_eval_string("{c_buffer}"),
+        lr_paramarr_idx("c_cgifields",
+        i));
+    }
+
+
+    lr_save_string(lr_eval_string("{c_buffer}removeFlights.x=36&removeFlights.y=4"), "c_wcr");
+
+    lr_start_transaction("DeleteTicket");
+
+
+    lr_save_string(lr_eval_string(lr_eval_string("{c_flightids_{c_flightids_count}}")),
+    "c_cancelflight");
+
+    web_reg_find("Text={c_cancelflight}", "Fail=Found", LAST);
+    
+
+    web_custom_request("itinerary.pl_2",
+    "URL=http://localhost:1080/cgi-bin/itinerary.pl",
+    "Method=POST",
+    "Resource=0",
+    "RecContentType=text/html",
+    "Referer=http://localhost:1080/cgi-bin/itinerary.pl",
+    "Snapshot=t23.inf",
+    "Mode=HTTP",
+    "Body={c_wcr}",
+    LAST);
+
+    lr_end_transaction("DeleteTicket", LR_AUTO);
 	
 	
 	

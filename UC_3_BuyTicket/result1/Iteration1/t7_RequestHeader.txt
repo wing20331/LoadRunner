@@ -15,6 +15,6 @@ Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
 Accept: */*
 Connection: Keep-Alive
 Host: localhost:1080
-Cookie: MSO=SID&1707411521; MTUserInfo=firstName&Papa&address2&San%20Ricardo%2F12345&username&papabear&hash&82&lastName&Bear%0A&address1&456%20Three%20Bears%20Trail&creditCard&&expDate&%0A
-Content-Length: 249
+Cookie: MSO=SID&1707751646; MTUserInfo=firstName&Puss&address2&San%20Ricardo%2F12345&username&pussinboots001&hash&49&lastName&In%20Boots%0A&address1&123%20Fairy%20Tale%20Lane&creditCard&&expDate&%0A
+Content-Length: 242
 

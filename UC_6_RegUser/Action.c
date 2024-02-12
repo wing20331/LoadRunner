@@ -86,6 +86,10 @@ lr_start_transaction("UC_6_addUser");
 		
 		lr_start_transaction("SignUp");
 
+		web_reg_find("Search=Body",
+		"Text=First time registering?",
+		LAST);
+		
 
 	web_link("sign up now", 
 		"Text=sign up now", 
@@ -101,7 +105,9 @@ lr_start_transaction("UC_6_addUser");
 	web_add_auto_header("Upgrade-Insecure-Requests", 
 		"1");
 
-		
+		web_reg_find("Search=Body",
+		"Text=Thank you, <b>{login1}</b>,",
+		LAST);
 	
 
 	web_submit_form("login.pl", 

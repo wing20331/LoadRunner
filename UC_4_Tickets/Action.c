@@ -41,7 +41,7 @@ Action()
 	web_reg_find("Text=Welcome to the Web Tours site",
              		LAST);
              		
-	lr_start_transaction("GoToIndex");
+	lr_start_transaction("IndexPage");
 
 		
 
@@ -75,7 +75,7 @@ Action()
 	web_add_auto_header("Sec-Fetch-Site", 
 		"same-origin");
 	
-	lr_end_transaction("GoToIndex", LR_AUTO);
+	lr_end_transaction("IndexPage", LR_AUTO);
 	
 	lr_think_time(5);
 
@@ -83,7 +83,7 @@ Action()
 	
 
 	
-	web_reg_find("Text=User password was correct",
+	web_reg_find("Text=Welcome, <b>{login}</b>",
 		LAST);
 
 	web_submit_data("login.pl",

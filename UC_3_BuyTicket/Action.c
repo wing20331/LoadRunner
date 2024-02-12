@@ -8,7 +8,7 @@ Action()
     
   	
 	
-lr_start_transaction("UC1_Buy_Ticket");
+lr_start_transaction("UC_3_Buy_Ticket");
 
 	web_set_sockets_option("SSL_VERSION", "AUTO");
 
@@ -93,7 +93,7 @@ lr_start_transaction("UC1_Buy_Ticket");
 		"same-origin");
 	
 	web_reg_find("Search=Body",
-		"Text=User password was correct",
+		"Text=Welcome, <b>{login}</b>,",
 		LAST);
 
 	web_submit_data("login.pl",
@@ -228,7 +228,7 @@ lr_start_transaction("UC1_Buy_Ticket");
 		lr_start_transaction("ChooseAirCraft");
 		
 	web_reg_find("Search=Body",
-		"Text=Payment Details",
+		"Text={FirstName}",
 		LAST);
 		
 		
@@ -308,7 +308,7 @@ lr_think_time(5);
 
 
 	
-	web_reg_find("Text=User wants the intineraries",
+	web_reg_find("Text=leaves {city}  for {city2}",
 		LAST);
 
 	web_url("Itinerary Button", 
@@ -346,7 +346,7 @@ lr_start_transaction("LogOut");
 	lr_end_transaction("LogOut", LR_AUTO);
 
 	
-lr_end_transaction("UC1_Buy_Ticket", LR_AUTO);
+lr_end_transaction("UC_3_Buy_Ticket", LR_AUTO);
 
 	return 0;
 }

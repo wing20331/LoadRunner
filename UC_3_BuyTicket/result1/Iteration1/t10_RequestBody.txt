@@ -1,4 +1,4 @@
-""firstName=Papa&lastName=Bear&address1=456 Three Bears Trail&address2=San Francisco&pass1=Papa"
-"+Bear&pass2=pass&creditCard=7890 1234 5678 9012&expDate=11/31&oldCCOption=&numPassengers=5&sea"
-"tType=Business&seatPref=Window&outboundFlight=681%3B950%3B02%2F10%2F2024&advanceDiscount=0&ret"
-"urnFlight=&JSFormSubmit=off&buyFlights.x=23&buyFlights.y=9&.cgifields=saveCC""
+""firstName=Puss&lastName=In Boots&address1=123 Fairy Tale Lane&address2=Zurich&pass1=Puss+In B"
+"oots&pass2=pass&pass3=pass&pass4=pass&creditCard=1234 5678 9012 3456&expDate=05/25&oldCCOption"
+"=&numPassengers=5&seatType=First&seatPref=None&outboundFlight=930%3B649%3B02%2F14%2F2024&advan"
+"ceDiscount=0&returnFlight=&JSFormSubmit=off&buyFlights.x=23&buyFlights.y=9&.cgifields=saveCC""

@@ -86,7 +86,7 @@ Action()
 		"same-origin");
 	
 	web_reg_find("Search=Body",
-		"Text=User password was correct",
+		"Text=Welcome, <b>{login}</b>",
 		LAST);
 
 	web_submit_data("login.pl",
